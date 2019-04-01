@@ -1,20 +1,20 @@
-apiVersion: apps/v1
+apiVersion: api/v1
 kind: Deployment
 metadata:
-  name: weather
+  name: hicweather
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: weather
+      app: hicweather
   template:
     metadata:
       labels:
-        app: weather
+        app: hicweather
     spec:
       containers:
-        - name: weather
-          image: hicollege.azurecr.io/weather:0.0.1-SNAPSHOT
+        - name: hicweather
+          image: hicollege.azurecr.io/hicweather:0.0.1
           resources:
             requests:
               cpu: 100m
@@ -24,57 +24,16 @@ spec:
               memory: 256Mi
           ports:
             - containerPort: 8080
-              name: weather
+              name: hicweather
+          
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: weather
-spec:
-  type: ClusterIP
-  ports:
-    - port: 8080
-  selector:
-    app: weather
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hello
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: hello
-  template:
-    metadata:
-      labels:
-        app: hello
-    spec:
-      containers:
-        - name: hello
-          image: hicollege.azurecr.io/hello:0.0.1-SNAPSHOT
-          resources:
-            requests:
-              cpu: 100m
-              memory: 128Mi
-            limits:
-              cpu: 250m
-              memory: 256Mi
-          ports:
-            - containerPort: 8080
-              name: hello
-          env:
-            - name: weatherUrl
-              value: http://weather:8080/weather
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: hello
+  name: hicweather
 spec:
   type: LoadBalancer
   ports:
     - port: 8080
   selector:
-    app: hello
+    app: hicweather
