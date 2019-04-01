@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hic.weather", "hic.weather\hic.weather.csproj", "{E3324690-9304-4B14-BC5A-7A95EBB7C672}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FEF22F9E-4ACB-425F-BFC1-33C2620472F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3324690-9304-4B14-BC5A-7A95EBB7C672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3324690-9304-4B14-BC5A-7A95EBB7C672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3324690-9304-4B14-BC5A-7A95EBB7C672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3324690-9304-4B14-BC5A-7A95EBB7C672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF22F9E-4ACB-425F-BFC1-33C2620472F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF22F9E-4ACB-425F-BFC1-33C2620472F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF22F9E-4ACB-425F-BFC1-33C2620472F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF22F9E-4ACB-425F-BFC1-33C2620472F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E96FAC0-F602-41BB-914C-AE4C7E887E37}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+docker build service name (hic.weather)
+dockerfilen ska ligga i katalogen (hic.weather)
+
+Skapa ett .net core web api projekt
+docker-compose up (kör lokalt från CMD)
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest ladda ner och installera
+az login - loggar in
+az aks get-credentials --resource-group Microservices-2019 –-name demo
+skapa en yaml fil för servicen (hicweather.yaml)
+kopierade från demo repo https://github.com/matsli/hicollege-demo och ändra namnen till rätt servicenamn och version
+Sätt versionsnummer i docker-compose
+kör docker-compose up
+
+Demotjänst: http://13.79.244.38:8080/hello
+
+

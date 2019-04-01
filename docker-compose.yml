@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  hic.weather:
+    image: ${DOCKER_REGISTRY-}hicweather:0.0.1
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      dockerfile: hic.weather/Dockerfile
